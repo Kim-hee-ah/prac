@@ -54,9 +54,10 @@
 }
 
 img{
+    width:30px;
+    height:30px;
     float:left;
 }
-
 .balance{
     font-weight:bold;
 }

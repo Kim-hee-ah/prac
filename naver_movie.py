@@ -27,14 +27,14 @@ for movie in movie_info:
         movie_data_schema['movie_code'] = movie.select_one('a')['href']
 
     movie_data_schema['movie_code']=re.findall('\d+',movie_data_schema['movie_code'])[0]
-    print(movie_data_schema['movie_code'])
+    #print(movie_data_schema['movie_code'])
     with open('./naver_movie.csv','a') as csvfile:
         fieldnames = ['movie_title', 'movie_code']
         csv_writer = csv.DictWriter(csvfile, fieldnames=fieldnames)       
         csv_writer.writerow(movie_data_schema)
         
 
-        # print(movie_data_schema, '\n')
+        print(movie_data_schema, '\n')
 
 
     
